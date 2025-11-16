@@ -659,3 +659,13 @@ body:not(.user-is-tabbing) a:focus {
     cursor: pointer;
     z-index: 1001;
   }
+
+  .subscribe-row {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between text and icon */
+  }
+  
+  .subscribe-row p {
+    margin: 0;
+  }
