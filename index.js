@@ -41,3 +41,22 @@ window.addEventListener("scroll", () => {
     alterStyles(isBackToTopRendered);
   }
 });
+
+document.querySelectorAll('.gallery img').forEach(img => {
+  img.addEventListener('click', function() {
+    const modal = document.getElementById('lightbox-modal');
+    const modalImg = document.getElementById('lightbox-img');
+    modalImg.src = this.src;
+    modal.classList.add('active');
+  });
+});
+
+document.querySelector('.lightbox-close').addEventListener('click', function() {
+  document.getElementById('lightbox-modal').classList.remove('active');
+});
+
+document.getElementById('lightbox-modal').addEventListener('click', function(e) {
+  if (e.target === this) {
+    this.classList.remove('active');
+  }
+});
